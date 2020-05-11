@@ -5,7 +5,8 @@ const MEMBERS = require("./Models/Members");
 const APP = express();
 
 // initializes the middleware
-APP.use(LOGGER);
+// didn't want to continue to log so commented out
+// APP.use(LOGGER);
 
 /**
  * This would require having a route for every page.
@@ -16,14 +17,8 @@ APP.get("/", (req, res) => {
 });
 */
 
-/**
- * @purpose gets all members
- */
-APP.get("/api/members", (req, res) => {
-  // .json will return json so I can hit this route on postman
-  //    and see the object MEMBERS
-  res.json(MEMBERS);
-});
+// members API routes
+APP.use("/api/members", require("./routes/api/members.js"));
 
 // Set static Folder
 /**
