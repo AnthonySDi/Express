@@ -1,18 +1,8 @@
 const express = require("express");
 const PATH = require("path");
+const LOGGER = require("./Middleware/logger"); // custom middleware
 const MEMBERS = require("./Models/Members");
 const APP = express();
-
-/**
- * @purpose to create customer middleware
- * @param {*} req
- * @param {*} res
- * @param {*} next moves on to the next middleware item.
- */
-const LOGGER = (req, res, next) => {
-  console.log(`${req.protocol}://${req.get("host")}${req.originalUrl}`);
-  next();
-};
 
 // initializes the middleware
 APP.use(LOGGER);
