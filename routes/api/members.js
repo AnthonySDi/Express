@@ -47,6 +47,8 @@ ROUTER.post("/", (req, res) => {
   MEMBERS.push(newMember);
 
   res.json(MEMBERS);
+  // uncomment out the line below to have page "refesh" the list
+  //res.redirect("/");
 });
 
 /**
