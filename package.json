@@ -1,0 +1,29 @@
+{
+  "name": "express-practice",
+  "version": "1.0.0",
+  "description": "Working with Express to create a better understanding of it",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnthonySDi/Express.git"
+  },
+  "author": "Anthony Stenberg-Di Geronimo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AnthonySDi/Express/issues"
+  },
+  "homepage": "https://github.com/AnthonySDi/Express#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^4.0.4",
+    "moment": "^2.25.3",
+    "uuid": "^8.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}
